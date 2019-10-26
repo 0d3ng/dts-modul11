@@ -46,7 +46,7 @@ public class CaloriesController {
         }
     }
 
-    @DeleteMapping("/calories")
+    @DeleteMapping("/calories/{id}")
     @ResponseStatus(HttpStatus.OK)
     public void delete(@PathVariable("id") Integer id) {
         caloriesDao.deleteById(id);
